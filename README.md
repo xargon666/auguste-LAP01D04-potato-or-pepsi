@@ -159,7 +159,7 @@ When working with a resource of some kind (this demo has used `cats` as a resour
 More on this when we learn about databases but keep it in mind, when a user hits your API, is it to do one of these things?
 
 ### REST
-[REST] stands for Representational State Transfer (protocol). This is merely a generally accepted convention that makes reading (and creating) different paths easier to understand. \
+[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) stands for Representational State Transfer (protocol). This is merely a generally accepted convention that makes reading (and creating) different paths easier to understand. \
 If I want to get all the cats, I expect to visit `www.animals.com/cats`, not `www.animals.com/all-the-cats` \
 If I am constructing a post request to add a cat, I expect to be posting to `www.animals.com/cats`, `www.animals.com/add-this-cat` \
 
