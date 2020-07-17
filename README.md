@@ -71,6 +71,8 @@ Now our script is set up let's run it with `npm start`.
 
 When you get feedback that your server is running, visit your location (in this example it's `http://localhost:3000`) in a browser and you should see something! Admittedly it's not much and is in fact an indication that we've got more work to do, but Express has handled it elegantly regardless. We didn't tell it what to do when any request was made and yet it served a basic html document. If you don't believe me, go to your terminal and run `curl http://localhost:3000`.
 
+*NB: If you get an error saying the port is already in use, use `lsof -i tcp:<port` to find the process ID (PID) that is running on that port. If you want to stop it, use `kill <PID>`.*
+
 ### CORS config
 To handle our CORS (cross-origin resource sharing), we can use a piece of ***middleware*** imaginatively named '[cors](https://expressjs.com/en/resources/middleware/cors.html)'.
 `npm install cors --save`
@@ -186,12 +188,12 @@ To run the demo repo code:
 # Exercise
 Working in pairs:
 1. Clone the node http server that you created yesterday. Keep the client the same.
-    - Setup an npm package for your server-side code and create a "dev" script
+    - Setup an npm package for your server-side code and create a "start" script
     - Change the backend to fulfil the same role, but using Express.
 
 2. Start work on your own API! You can choose what you use to create it and what it does.
     - Consider [RESTful routing](https://gist.github.com/alexpchin/09939db6f81d654af06b)
     - As a stretch goal, try and implement all four parts of [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionality (Create, Read, Update, Delete)
-    - Prepare a short demonstration of your API's functionality (perhaps this will mean writing some front-end code, perhaps not) to share with the group.
+    - Prepare a short demonstration of your API's functionality (perhaps this will mean writing some front-end code, perhaps not) to share with the group. You could demonstrate using `curl`, [Postman](https://www.postman.com/), a custom frond-end or a combination!
 
 ***
