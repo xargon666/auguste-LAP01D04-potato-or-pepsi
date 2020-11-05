@@ -33,7 +33,10 @@ function submitCat(e){
 
     const options = { 
         method: 'POST',
-        body: JSON.stringify(catData)
+        body: JSON.stringify(catData),
+        headers: {
+            "Content-Type": "application/json"
+        }
     };
 
     fetch('http://localhost:3000/cats', options)
