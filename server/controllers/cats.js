@@ -10,11 +10,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     try {
+        console.log(req.params.id);
         const catId = parseInt(req.params.id);
         const selectedCat = Cat.findById(catId);
-        if (!selectedCat) {
-            throw new Error('That cat does not exist!');
-        }
         res.send(selectedCat);
     } catch (err) {
         console.log(err);

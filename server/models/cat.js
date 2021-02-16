@@ -13,9 +13,13 @@ class Cat {
     }
 
     static findById(id) {
-        const catData = catsData.filter((cat) => cat.id === id)[0];
-        const cat = new Cat(catData);
-        return cat;
+        try {
+            const catData = catsData.filter((cat) => cat.id === id)[0];
+            const cat = new Cat(catData);
+            return cat;
+        } catch (err) {
+            throw new Error('That cat does not exist!');
+        }
     }
 
     static create(cat) {
