@@ -47,6 +47,12 @@ describe('API server', () => {
             .expect({id: 3, name: "Rumble", age: 12}, done)
     })
 
+    it('responds to a unknown cat id with a 404', done => {
+        request(api)
+            .get('/cats/42')
+            .expect(404, done)
+    })
+
     it('responds to delete /cats/:id with status 204', async () => {
         await request(api)
             .delete('/cats/4')
