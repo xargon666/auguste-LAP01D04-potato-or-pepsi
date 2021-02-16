@@ -8,17 +8,23 @@ To run the demo repo code:
 3. Install dependencies
     - `cd server`
     - `npm install`
-3. Start your server
+4. Start your server
     - make sure you are inside the server folder
     - `npm start`
-4. Open your client
+5. Open your client
     - `cd ../client`
     - `open index.html`
   
 To run the server tests:
    - make sure you are inside the server folder
    - `npm test`
-   - you can use `npm run coverage` to check the test coverage (it's at 100%!)
+   - you can use `npm run coverage` to check the test coverage
+
+To run the client tests:
+   - make sure you are inside the client folder
+   - `npm install` (you only need to do this before your first client test run)
+   - `npm test`
+   - you can use `npm run coverage` to check the test coverage
 
 
 # Exercises
@@ -26,7 +32,7 @@ Working in pairs:
 1. Start work on your own API!
    - You can choose what your API does
    - You can choose what you use to create it eg. http module/express/alternative framework.
-   - Write some tests using [mocha](https://www.npmjs.com/package/mocha) and [supertest](https://www.npmjs.com/package/supertest) and check your coverage with [nyc](https://www.npmjs.com/package/nyc), aiming for minimum 60-80% coverage.
+   - Write some tests using [jest](https://jestjs.io/docs/en/getting-started) and [supertest](https://www.npmjs.com/package/supertest) and check your coverage with [jest](https://jestjs.io/docs/en/cli#--coverageboolean), aiming for minimum 60-80% coverage.
     - Consider [RESTful routing](https://gist.github.com/alexpchin/09939db6f81d654af06b)
     - As a stretch goal, try and implement all four parts of [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) functionality (Create, Read, Update, Delete)
 
