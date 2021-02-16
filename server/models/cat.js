@@ -10,7 +10,7 @@ class Cat {
     static get all() {
         const catsData = data;
         const cats = catsData.map((cat) => new Cat(cat.id, cat.name, cat.age));
-        return catsData;
+        return cats;
     }
 
     static findById(id) {
