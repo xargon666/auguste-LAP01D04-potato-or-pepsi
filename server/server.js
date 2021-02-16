@@ -2,14 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const Cat = require('./models/cat');
+
 // My cats resource
-class Cat {
-    constructor(id, name, age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
-}
 
 const cats = [
     { id: 1, name: 'Zelda', age: 3 },
