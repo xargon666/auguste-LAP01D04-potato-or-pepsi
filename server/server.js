@@ -39,15 +39,15 @@ app.get('/cats/:id', (req, res) => {
 app.post('/cats', (req, res) => {
     const data = req.body;
     const newCatId = cats.length + 1;
-    const newCat = new Cat(newCatId, data.name, data.age);
+    const newCat = Cat.create(newCatId, data.name, data.age);
     cats.push(newCat);
     res.status(201).send(newCat);
 });
 
 app.delete('/cats/:id', (req, res) => {
     const catId = parseInt(req.params.id);
-    const catToDelete = cats.find((c) => c.id === catId);
-    cats.splice(cats.indexOf(catToDelete), 1);
+    const catToDestroy = Cat.findById(catId);
+    catToDestroy.destroy();
     res.status(204).send();
 });
 

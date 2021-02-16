@@ -1,3 +1,5 @@
+const { indexOf } = require('../data');
+const cats = require('../data');
 const data = require('../data');
 
 class Cat {
@@ -17,6 +19,17 @@ class Cat {
         const catData = data.filter((cat) => cat.id === id)[0];
         const cat = new Cat(catData.id, catData.name, catData.age);
         return cat;
+    }
+
+    static create(id, name, age) {
+        const newCat = new Cat(id, name, age);
+        return newCat;
+    }
+
+    destroy() {
+        const catsData = data;
+        const cat = catsData.filter((cat) => cat.id === this.id)[0];
+        catsData.splice(catsData.indexOf(cat), 1);
     }
 }
 
