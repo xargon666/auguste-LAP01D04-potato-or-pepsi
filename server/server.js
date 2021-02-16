@@ -2,15 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const cats = require('./data');
 const Cat = require('./models/cat');
-
-// My cats resource
-
-const cats = [
-    { id: 1, name: 'Zelda', age: 3 },
-    { id: 2, name: 'Tigerlily', age: 10 },
-    { id: 3, name: 'Rumble', age: 12 },
-];
 
 const app = express();
 app.use(bodyParser.json());
@@ -25,7 +18,8 @@ app.post('/', (req, res) => {
 });
 
 app.get('/cats', (req, res) => {
-    res.send(cats);
+    const catsData = Cat.all;
+    res.send(catsData);
 });
 
 app.get('/cats/:id', (req, res) => {
