@@ -1,18 +1,4 @@
 // ********************************************
-// SETUP
-const btn = document.querySelector('button');
-const form = document.querySelector('#new-cat-form');
-const catsList = document.querySelector('ul');
-
-// Bind event listeners
-btn.addEventListener('click', getMessage);
-form.addEventListener('submit', submitCat);
-
-// Fetch all cats as soon as app is loaded
-getAllCats();
-
-// ********************************************
-
 // CATS FLOW
 // index
 function getAllCats(){
@@ -46,13 +32,14 @@ function submitCat(e){
 };
 
 // helpers
-function appendCats(data){
-    data.cats.forEach(appendCat);
+function appendCats(cats){
+    cats.forEach(appendCat);
 };
 
 function appendCat(catData){
     const newLi = document.createElement('li');
     newLi.textContent = `Name: ${catData.name} || Age: ${catData.age}`
+    const catsList = document.querySelector('ul');
     catsList.append(newLi);
 };
 
@@ -74,3 +61,12 @@ function renderMessage(msgText){
 };
 
 // ********************************************
+
+module.exports = {
+    getAllCats,
+    submitCat,
+    appendCats,
+    appendCat,
+    getMessage,
+    renderMessage
+}
