@@ -1,5 +1,3 @@
-const { indexOf } = require('../data');
-const cats = require('../data');
 const data = require('../data');
 
 class Cat {
@@ -21,8 +19,11 @@ class Cat {
         return cat;
     }
 
-    static create(id, name, age) {
-        const newCat = new Cat(id, name, age);
+    static create(name, age) {
+        const catsData = data;
+        const newCatId = catsData.length + 1;
+        const newCat = new Cat(newCatId, name, age);
+        catsData.push(newCat);
         return newCat;
     }
 

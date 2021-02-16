@@ -38,9 +38,7 @@ app.get('/cats/:id', (req, res) => {
 
 app.post('/cats', (req, res) => {
     const data = req.body;
-    const newCatId = cats.length + 1;
-    const newCat = Cat.create(newCatId, data.name, data.age);
-    cats.push(newCat);
+    const newCat = Cat.create(data.name, data.age);
     res.status(201).send(newCat);
 });
 
