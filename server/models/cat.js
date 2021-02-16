@@ -1,4 +1,4 @@
-const cats = require('../data');
+const data = require('../data');
 
 class Cat {
     constructor(id, name, age) {
@@ -8,8 +8,15 @@ class Cat {
     }
 
     static get all() {
-        const catData = cats;
-        return catData;
+        const catsData = data;
+        const cats = catsData.map((cat) => new Cat(cat.id, cat.name, cat.age));
+        return catsData;
+    }
+
+    static findById(id) {
+        const catData = data.filter((cat) => cat.id === id)[0];
+        const cat = new Cat(catData.id, catData.name, catData.age);
+        return cat;
     }
 }
 

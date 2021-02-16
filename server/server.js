@@ -25,7 +25,7 @@ app.get('/cats', (req, res) => {
 app.get('/cats/:id', (req, res) => {
     try {
         const catId = parseInt(req.params.id);
-        const selectedCat = cats.find((c) => c.id === catId);
+        const selectedCat = Cat.findById(catId);
         if (!selectedCat) {
             throw new Error('That cat does not exist!');
         }
