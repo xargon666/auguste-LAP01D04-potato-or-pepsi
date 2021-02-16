@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     try {
-        console.log(req.params.id);
         const catId = parseInt(req.params.id);
         const selectedCat = Cat.findById(catId);
         res.send(selectedCat);
