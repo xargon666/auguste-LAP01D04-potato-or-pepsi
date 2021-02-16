@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "jest --watch",
-    "coverage": "jest --coverage"
+    "test": "jest --silent --watch",
+    "coverage": "jest --coverage --silent"
   },
   "keywords": [],
   "author": "",
