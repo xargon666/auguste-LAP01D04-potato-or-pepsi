@@ -13,11 +13,11 @@ To run the demo repo code:
     - `npm start`
 5. Open your client
     - `cd ../client`
-    - `open index.html`
+    - `open index.html` (or server of your choice eg. node's `http-server` or python's `python -m http.server`)
   
 To run the server tests:
    - make sure you are inside the server folder
-   - `npm test`
+   - `npm run dev`
    - you can use `npm run coverage` to check the test coverage
 
 To run the client tests:
