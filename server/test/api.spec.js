@@ -34,6 +34,7 @@ describe('API server', () => {
         request(api)
             .post('/cats')
             .send(testCat)
+            .set('Accept', /application\/json/)
             .expect(201)
             .expect({ id: 4, ...testCat }, done);
     });
