@@ -4,7 +4,8 @@
   "description": "Demo express server",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent"
   },
