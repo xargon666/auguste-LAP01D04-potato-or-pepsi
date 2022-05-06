@@ -1,12 +1,10 @@
 // ********************************************
 // SETUP
-const btn = document.querySelector('button');
-const form = document.querySelector('#new-cat-form');
+const form = document.querySelector('#new-pp-form');
 
 // Bind event listeners
-btn.addEventListener('click', getMessage);
-form.addEventListener('submit', submitCat);
+form.addEventListener('submit', submitPp);
 
 // Fetch all cats as soon as app is loaded
-getAllCats();
+getAllPp();
 // ********************************************

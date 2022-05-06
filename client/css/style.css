@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 1vw;
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+.ppOutput {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.ppOutput .pp {
+  margin: 1em 1em;
+}
+
+.potato {
+  content: url("../img/potato.png");
+  width: 120px;
+}
+
+.pepsi {
+  content: url("../img/pepsi.png");
+  width: 100px;
+}
+
+/* background: center / contain no-repeat url("../../media/examples/firefox-logo.svg"),
+            #eee 35% url("../../media/examples/lizard.png"); */
