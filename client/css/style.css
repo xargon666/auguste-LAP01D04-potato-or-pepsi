@@ -1,7 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #b9b9e9;
+    
+}
+
+header {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:column wrap;
+}
+
+header form input {
+    padding: 0.5em;
+}
+
+h1{
+    font-weight: 1000;
+    font-size:40px;
+    margin-bottom:5px;
+    color:darkblue;
 }
 
 .wrapper {
@@ -31,5 +57,25 @@ header {
   width: 100px;
 }
 
-/* background: center / contain no-repeat url("../../media/examples/firefox-logo.svg"),
-            #eee 35% url("../../media/examples/lizard.png"); */
+/* CSS */
+.button-34 {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
